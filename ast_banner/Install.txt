@@ -1,0 +1,17 @@
+ Installation
+ ================
+ 1) Copy ast_banner into 'extension' folder
+  
+	
+ 2) Activate ast_banner
+   In administrator user interface, click 'setup' tab->'extensions' menu, select 'ast_banner', click button 'Apply Changes'.
+   or in settings/override/site.ini.append.php, add acivation configuration under "ExtensionSettings" section:
+     [ExtensionSettings]
+     ActiveExtensions[]=ast_banner
+
+ 3) Regenerate autoloads
+    In administrator user interface, click 'setup' tab->'extensions' menu, select 'ast_banner', click button 'Regenerate autoload arrays for extensions',
+    or in eZ Publish installation folder, run "php bin/php/ezpgenerateautoloads.php -e"
+    
+ 4) Clear cache
+    Clear INI and template caches. (from admin 'Setup' tab or commandline)
