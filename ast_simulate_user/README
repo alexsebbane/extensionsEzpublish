@@ -1,0 +1,19 @@
+Extension utilisée pour:
+
+- donner aux admins la possibilité de se logguer en front avec le compte utilisateur souhaité
+
+
+Nouveaux Modules:
+
+- simulate/impersonate:
+  Example d'appel: /simulate/impersonate/1234?RedirectAfterLogin=ezinfo/about
+  va rediriger l'utilisateur vers le siteacces par défaut, page /ezinfo/about et le logguer en tant que user 1234.
+  Si le user 1234 n'existe pas ou n'est pas activé, l'appelant serà redirigé vers la page d'ou il vient.
+  Attention: il a besoin d'une permission specifique pour etre accessible...
+
+
+Nouveaux Templates:
+
+- vue full pour le node de classe user, à activer en siteaccess admin:
+  ajoute un bouton 'Impersonate' qui permet aux admins de devenir des autres utilisateurs, en les redirigeant en meme temps vers le siteaccess frontal
+  NB: afin que le cahngement de user sur le siteaccess frontal marche à tous les coups, le setting Session/SessionNamePerSiteAccess de site.ini doit etre mis à disabled
